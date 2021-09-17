@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Android_Lab_Lesson_06</string>
+    <string name="courses">Courses</string>
+    <string name="exams">Exams</string>
+    <string name="freelance">Freelance</string>
+</resources>

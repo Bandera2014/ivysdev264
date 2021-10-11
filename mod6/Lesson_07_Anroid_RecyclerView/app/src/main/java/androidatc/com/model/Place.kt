@@ -5,6 +5,3 @@ class Place{
     var cityName: String?=null
 }
 
-/*
-    HEEEEEYYYYYYYYYY - YOU'RE STILL ON PAGE 7-59
- */

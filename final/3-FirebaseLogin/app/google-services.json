@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "751725210923",
+    "project_id": "ivy264-4211c",
+    "storage_bucket": "ivy264-4211c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751725210923:android:26158678ba0a79f5c9e96e",
+        "android_client_info": {
+          "package_name": "com.example.banderfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751725210923-k46piesn6ingdfm90rl5umk5sdn5v6q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTpapd9INgdfXzLAPiR09yGoGkO9xfMGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751725210923-k46piesn6ingdfm90rl5umk5sdn5v6q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

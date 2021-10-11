@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <Button
-        android:id="@+id/updateBTN"
+        android:id="@+id/signInUpBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

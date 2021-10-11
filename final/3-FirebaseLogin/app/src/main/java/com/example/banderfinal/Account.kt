@@ -11,7 +11,7 @@ class Account:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.account)
 
-        updateBTN.setOnClickListener {
+        signInUpBTN.setOnClickListener {
             var intent = Intent(this,Stream::class.java)
             startActivity(intent)
         }

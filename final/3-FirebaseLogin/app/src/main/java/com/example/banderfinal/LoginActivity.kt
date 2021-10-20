@@ -109,4 +109,31 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Enter all details", Toast.LENGTH_SHORT).show()
         }
     }
+
+    private fun updateUserInfoAndUI() {
+
+        //start next activity
+        val intent = Intent(this@LoginActivity, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+    }
+    private fun verifyEmail() {
+        val mUser = mAuth!!.currentUser;
+        mUser!!.sendEmailVerification()
+                .addOnCompleteListener(this) { task ->
+
+                    if (task.isSuccessful) {
+                        Toast.makeText(this@LoginActivity,
+                                "Verification email sent to " + mUser.getEmail(),
+                                Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.e(TAG, "sendEmailVerification", task.exception)
+                        Toast.makeText(this@LoginActivity,
+                                "Failed to send verification email.",
+                                Toast.LENGTH_SHORT).show()
+                    }
+                }
+    }
+
+
 }

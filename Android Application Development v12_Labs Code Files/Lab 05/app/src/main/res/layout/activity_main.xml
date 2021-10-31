@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Android Pizza Shop    "
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:text="Choose Your Pizza Size:     "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="417dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="154dp">
+
+            <RadioButton
+                android:id="@+id/smallpizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPlaceOrderButtonClicked"
+                android:text="Small ($ 5 )" />
+
+            <RadioButton
+                android:id="@+id/mediumpizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPlaceOrderButtonClicked"
+                android:text="Medium ($ 7 )" />
+
+            <RadioButton
+                android:id="@+id/largepizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPlaceOrderButtonClicked"
+                android:text="Large ($ 9 )" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Choose Your Toppings:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <CheckBox
+        android:id="@+id/OnionsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onPlaceOrderButtonClicked"
+        android:text="Onions ($ 1)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/OlivesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Olives ($ 2 )"
+        app:layout_constraintStart_toEndOf="@+id/OnionsCheckBox"
+        android:onClick="onPlaceOrderButtonClicked"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <CheckBox
+        android:id="@+id/TomatoesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:text="Tomatoes ($ 3 )"
+        app:layout_constraintStart_toEndOf="@+id/OlivesCheckBox"
+        android:onClick="onPlaceOrderButtonClicked"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/orderbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Place Your Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/OlivesCheckBox" />
+
+    <TextView
+        android:id="@+id/Totalprice"
+        android:layout_width="167dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OlivesCheckBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

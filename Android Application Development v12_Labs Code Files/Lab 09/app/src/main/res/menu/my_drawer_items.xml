@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <item
+        android:id="@+id/inboxId"
+        android:icon="@drawable/ic_baseline_mail_24"
+        android:title="Inbox">
+        <menu>
+            <item
+                android:id="@+id/sentId"
+                android:title="Sent Items" />
+            <item
+                android:id="@+id/outboxId"
+                android:title="Outbox" />
+            <item
+                android:id="@+id/spamId"
+                android:title="Spam Mails" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/calendarId"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="Calendars" />
+
+    <item android:id="@+id/contactsId"
+        android:icon="@drawable/ic_baseline_contacts_24"
+        android:title="Contacts" />
+
+    <item android:id="@+id/settingsId"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
+
+</menu>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm">
+
+    <TextView
+        android:id="@+id/SnameId"
+        android:layout_width="107dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SaddressId"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="124dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ScityId"
+        android:layout_width="118dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SstateId"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintStart_toEndOf="@+id/ScityId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SzipId"
+        android:layout_width="71dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintStart_toEndOf="@+id/SstateId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ScountryId"
+        android:layout_width="193dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ScityId" />
+
+    <Button
+        android:id="@+id/acceptId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="468dp"
+        android:text="accept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="accept"/>
+
+    <Button
+        android:id="@+id/editId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="468dp"
+        android:text="Edit"
+        app:layout_constraintStart_toEndOf="@+id/acceptId"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="edit"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

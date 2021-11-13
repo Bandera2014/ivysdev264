@@ -31,8 +31,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="164dp"
         android:text="Name:"
         app:layout_constraintEnd_toStartOf="@+id/nameId"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="108dp"
-        android:text="Name:"
+        android:hint="Name:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="108dp"
-        android:text="Adress:"
+        android:hint="Address:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameId" />
 
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="120dp"
-        android:text="City:"
+        android:hint="City:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressId" />
 
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="40dp"
-        android:text="Province (State):"
+        android:hint="Province (State):"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityId" />
 
@@ -133,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="40dp"
-        android:text="Postal (Zip) Code:"
+        android:hint="Postal (Zip) Code:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stateId" />
 
@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="108dp"
-        android:text="Country:"
+        android:hint="Country:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zipId" />
 
@@ -156,7 +156,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="mySchedule"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Confirm"/>
+        <activity android:name=".ThankYou"/>
     </application>
 
 </manifest>

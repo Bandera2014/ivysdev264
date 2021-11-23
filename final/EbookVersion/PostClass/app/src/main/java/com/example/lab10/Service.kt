@@ -22,7 +22,7 @@ class Service : AppCompatActivity() {
         readCountryId.setText("")
         val db = FirebaseFirestore.getInstance()
         //Customer: is your database collection name.  It is case sensitive.
-        db.collection("test").get().addOnCompleteListener{
+        db.collection("Post").get().addOnCompleteListener{
             val result:  StringBuffer = StringBuffer()
             if(it.isSuccessful){
 
@@ -37,10 +37,11 @@ class Service : AppCompatActivity() {
                     //for "Country" use the same spelling which you have used before in the
                     // Signup file.append("    "):  to make a space btwn country values' results.
 
-                        Post(document.data.getValue("name").toString(),
-                            document.data.getValue("city").toString()
-                        )
-                    result.append(document.data.getValue("Country")).append("\n")
+
+                    Log.d("PostClassImplement",Post(document.data.getValue("name").toString(),
+                        document.data.getValue("name").toString()
+                    ).toString())
+                    result.append(document.data.getValue("name")).append("\n")
                 }
                 readCountryId.setText(result)
             }

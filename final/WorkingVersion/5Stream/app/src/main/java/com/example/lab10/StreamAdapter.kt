@@ -11,6 +11,7 @@ import org.w3c.dom.Text
 
 
 class StreamAdapter (private val list: ArrayList<Post>, private val context:Context): RecyclerView.Adapter<ViewHolder>(){
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindItem(post:Post){
             var name: TextView = itemView.findViewById(R.id.nameTXT) as TextView
@@ -18,15 +19,9 @@ class StreamAdapter (private val list: ArrayList<Post>, private val context:Cont
         }
     }
 
-    TODO("Page 9-28...  Good Luck")
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.card_layout,parent,false)
         return ViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(list[position])
     }
 
     override fun getItemCount(): Int {
@@ -34,7 +29,7 @@ class StreamAdapter (private val list: ArrayList<Post>, private val context:Cont
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bindItem(list[position])
     }
 
 

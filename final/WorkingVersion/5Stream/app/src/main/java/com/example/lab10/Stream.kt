@@ -28,12 +28,13 @@ class Stream : AppCompatActivity() {
         myRecyclerView.layoutManager=layoutManager
         myRecyclerView.adapter=adapter
 
+        Log.d("Adapter", postList.toString())
+        readFireStoreData()
 
         fab.setOnClickListener {
-            startActivity(Intent(this,PostActivity::class.java))
+            readFireStoreData()
+//            startActivity(Intent(this,PostActivity::class.java))
         }
-
-        readFireStoreData()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -54,35 +55,21 @@ class Stream : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
         //Customer: is your database collection name.  It is case sensitive.
         db.collection("Post").get().addOnCompleteListener{
-            val result:  StringBuffer = StringBuffer()
             if(it.isSuccessful){
-
                 for(document in it.result!!){
-                    /*
-                        Log.d("readFireStoreData", document.toString())
-                        Log.d("readFireStoreData", document.data.toString())
-                        Log.d("readFireStoreData", document.data.getValue("Country",) as String)
-                        Log.d("readFireStoreData", document.data.getValue("Country",).toString())
-                        Log.d("readFireStoreData", document.data.getValue("City",).toString())
-                        Log.d("readFireStoreData", document.data.getValue("Phone Number",).toString())
-                        Log.d("readFireStoreData", document.data.getValue("Name",).toString())
-                        //for "Country" use the same spelling which you have used before in the
-                        // Signup file.append("    "):  to make a space btwn country values' results.
-                    */
-
                     Log.d("PostClassImplement",Post(document.data.getValue("name").toString(),
                         document.data.getValue("name").toString()
                     ).toString())
-
 
                     postList!!.add(Post(
                         document.data.getValue("name") as String,
                         document.data.getValue("desc") as String
                     ))
+                    Log.d("Adapter", postList.toString())
                 }
-//                readCountryId.setText(result)
             }
         }
+        Log.d("Adapter", postList.toString())
         adapter!!.notifyDataSetChanged()
     }
 }
